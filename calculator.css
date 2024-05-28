@@ -1,0 +1,102 @@
+body
+{
+  background-image:url("background.jpg");
+}
+#layout
+{
+  background-color:black;
+  border:3px solid white;
+  border-radius:5px;
+  width:20%;
+  height:80%; 
+  margin:auto; 
+  margin-top:100px; 
+}
+#header
+{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+#heading
+{
+  color:white;
+  font-size:20px;
+  margin-left:10px;
+  margin-top:10px;
+  margin-bottom:3px;
+}
+
+#outputbox
+{
+  background-color:#def8b6;
+  margin:5px 25px;
+  width:250px;
+  height:40px;
+  font-size:15px;
+}
+#button-container
+{
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  justify-content:center;
+}
+.press,.pressOp,.pressClear,.pressEqual
+{
+  background-color:white;
+  border:4px outset rgb(238, 228, 228);
+  height:50px;
+  width:50px;
+  font-size:17px;
+  margin:10px;
+}
+.pressOp,.pressEqual
+{
+  background-color:rgb(229, 166, 50);
+  border:4px outset rgb(231, 182, 90);
+}
+.pressClear
+{
+  background-color:rgba(233, 67, 67, 0.811);
+  border:4px outset rgb(234, 100, 100); 
+}
+#togbtn
+{
+   position : relative ;
+   display : inline;
+   height:13px;
+   width:40px;
+   padding:3px;
+   background-color:white;
+   border-radius:30px;
+   border: 3px solid rgb(206, 200, 200);
+   font-size:11px;
+  }
+#togbtn::before
+{
+   content:"";
+   position: absolute;
+   top:-1px; 
+   left:1px;
+   width:25px;
+   height:20px;
+   border-radius:50%;
+   background-color:rgb(172, 160, 160);
+   transition:0.5s;
+}
+#toggle:checked + #togbtn::before
+{
+  transform:translateX(26.5px);
+  background-color:rgb(54, 49, 49);
+}
+#toggle:checked + #togbtn 
+{
+  background-color:rgb(118, 113, 113);
+  border: 3px solid rgb(83, 79, 79);
+  color:white;
+}
+#toggle
+{ 
+ display:none;
+}
